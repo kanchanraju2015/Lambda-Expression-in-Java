@@ -33,6 +33,5 @@ System.out.println("filter by age<50 and city ==ranchi");
 emp.stream().filter(a->a.getCity()=="ranchi" && a.getAge()<50).forEach((a->System.out.println(a)));
 long count1=emp.stream().filter(a->a.getCity()=="ranchi").count();
 System.out.println(count1);
-
 }
 }

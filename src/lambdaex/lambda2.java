@@ -1,7 +1,7 @@
 package lambdaex;
 
 import java.util.function.Function; // note the package name is function 
-//  THIS IS THE TRADITIONAL WAY OF USINGFUNCTIONAL INTERFACE 
+//  THIS IS THE TRADITIONAL WAY OF USING FUNCTIONAL INTERFACE 
 class jk implements Function<String,Integer>// jk class implements Function interface 
 {
 @Override //
@@ -16,5 +16,12 @@ public static void main(String args[])
 {
 jk j=new jk();
 System.out.println(j.apply("hello java"));// calling interface method i.e returns integer as defined
+Function<String,String> data=(msg)->msg.toUpperCase();
+System.out.println(data.apply("hello lambda"));
+Function<String,String> mydata=(msg)->
+{
+return 	msg.concat(" Ranchi city");// this is with return statement same output 
+};// this is also valid statement can be minimized 
+System.out.println(mydata.apply("hello lambda method"));// method must be called 
 }
 }
